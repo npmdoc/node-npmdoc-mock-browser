@@ -1,0 +1,695 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/darrylwest/mock-browser"
+
+    >mock-browser (v0.92.14)</a>
+</h1>
+<h4>A mock browser with window, document, location, navigation, local and session storage to use for client side code tests in a node environment.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mock-browser">module mock-browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.delegates.AbstractBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.</span>delegates.AbstractBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.</span>mocks.MockBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mock-browser.</span>delegates</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mock-browser.</span>mocks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mock-browser.delegates">module mock-browser.delegates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.delegates.AbstractBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.delegates.</span>AbstractBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mock-browser.delegates.AbstractBrowser">module mock-browser.delegates.AbstractBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.delegates.AbstractBrowser.AbstractBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.delegates.</span>AbstractBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.delegates.AbstractBrowser.extend">
+            function <span class="apidocSignatureSpan">mock-browser.delegates.AbstractBrowser.</span>extend
+            <span class="apidocSignatureSpan">(child, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mock-browser.mocks">module mock-browser.mocks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockStorage">
+            function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockStorage
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mock-browser.mocks.MockBrowser">module mock-browser.mocks.MockBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockBrowser.MockBrowser">
+            function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockBrowser
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockBrowser.createDocument">
+            function <span class="apidocSignatureSpan">mock-browser.mocks.MockBrowser.</span>createDocument
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mock-browser.mocks.MockBrowser.createWindow">
+            function <span class="apidocSignatureSpan">mock-browser.mocks.MockBrowser.</span>createWindow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mock-browser" id="apidoc.module.mock-browser">module mock-browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.delegates.AbstractBrowser" id="apidoc.element.mock-browser.delegates.AbstractBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.</span>delegates.AbstractBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delegates.AbstractBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win = options.window;
+
+    if (!win &#x26;&#x26; typeof window === &#x27;object&#x27;) {
+        win = window;
+    }
+
+    this.getDocument = function() {
+        return win.document;
+    };
+
+    this.getWindow = function() {
+        return win;
+    };
+
+    this.getHistory = function() {
+        return win.history;
+    };
+
+    this.getLocation = function() {
+        return win.location;
+    };
+
+    this.getLocalStorage = function() {
+        return win.localStorage;
+    };
+
+    this.getSessionStorage = function() {
+        return win.sessionStorage;
+    };
+
+    this.getNavigator = function() {
+        return win.navigator;
+    };
+
+    // constructor validations
+    if (!win) throw new Error(&#x27;AbstractBrowser requires a window object&#x27;);
+
+    // complete the window object by assigning local and session storage
+    if (!win.localStorage) win.localStorage = options.localStorage;
+    if (!win.sessionStorage) win.sessionStorage = options.sessionStorage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockBrowser" id="apidoc.element.mock-browser.mocks.MockBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.</span>mocks.MockBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mocks.MockBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win, opts;
+
+    if (!options) {
+        options = {};
+    }
+
+    if (options.window) {
+        // user has already created a jsdom window with document.
+        win = options.window;
+    }
+    else
+    {
+        var doc = jsdom(&#x27;&#x3c;!DOCTYPE html&#x3e;&#x3c;html&#x3e;&#x3c;body&#x3e;&#x3c;/body&#x3e;&#x3c;/html&#x3e;&#x27; );
+        win = doc.defaultView;
+    }
+
+    if (!win.localStorage) {
+        (win).localStorage = options.localStorage || new MockStorage();
+    }
+
+    if (!win.sessionStorage) {
+        (win).sessionStorage = options.sessionStorage = new MockStorage();
+    }
+
+    opts = dash.clone( options );
+    opts.window = win;
+
+    AbstractBrowser.extend( this, opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mock-browser.delegates" id="apidoc.module.mock-browser.delegates">module mock-browser.delegates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.delegates.AbstractBrowser" id="apidoc.element.mock-browser.delegates.AbstractBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.delegates.</span>AbstractBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win = options.window;
+
+    if (!win &#x26;&#x26; typeof window === &#x27;object&#x27;) {
+        win = window;
+    }
+
+    this.getDocument = function() {
+        return win.document;
+    };
+
+    this.getWindow = function() {
+        return win;
+    };
+
+    this.getHistory = function() {
+        return win.history;
+    };
+
+    this.getLocation = function() {
+        return win.location;
+    };
+
+    this.getLocalStorage = function() {
+        return win.localStorage;
+    };
+
+    this.getSessionStorage = function() {
+        return win.sessionStorage;
+    };
+
+    this.getNavigator = function() {
+        return win.navigator;
+    };
+
+    // constructor validations
+    if (!win) throw new Error(&#x27;AbstractBrowser requires a window object&#x27;);
+
+    // complete the window object by assigning local and session storage
+    if (!win.localStorage) win.localStorage = options.localStorage;
+    if (!win.sessionStorage) win.sessionStorage = options.sessionStorage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mock-browser.delegates.AbstractBrowser" id="apidoc.module.mock-browser.delegates.AbstractBrowser">module mock-browser.delegates.AbstractBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.delegates.AbstractBrowser.AbstractBrowser" id="apidoc.element.mock-browser.delegates.AbstractBrowser.AbstractBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.delegates.</span>AbstractBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win = options.window;
+
+    if (!win &#x26;&#x26; typeof window === &#x27;object&#x27;) {
+        win = window;
+    }
+
+    this.getDocument = function() {
+        return win.document;
+    };
+
+    this.getWindow = function() {
+        return win;
+    };
+
+    this.getHistory = function() {
+        return win.history;
+    };
+
+    this.getLocation = function() {
+        return win.location;
+    };
+
+    this.getLocalStorage = function() {
+        return win.localStorage;
+    };
+
+    this.getSessionStorage = function() {
+        return win.sessionStorage;
+    };
+
+    this.getNavigator = function() {
+        return win.navigator;
+    };
+
+    // constructor validations
+    if (!win) throw new Error(&#x27;AbstractBrowser requires a window object&#x27;);
+
+    // complete the window object by assigning local and session storage
+    if (!win.localStorage) win.localStorage = options.localStorage;
+    if (!win.sessionStorage) win.sessionStorage = options.sessionStorage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.delegates.AbstractBrowser.extend" id="apidoc.element.mock-browser.delegates.AbstractBrowser.extend">
+        function <span class="apidocSignatureSpan">mock-browser.delegates.AbstractBrowser.</span>extend
+        <span class="apidocSignatureSpan">(child, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (child, options) {
+    &#x27;use strict&#x27;;
+
+    var parent = new AbstractBrowser( options );
+
+
+    dash.functionsIn( parent ).forEach(function(method) {
+        child[ method ] = parent[ method ];
+    });
+
+    return parent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* getNavigator()
+* getHistory()
+* getLocalStorage()
+* getSessionStorage()
+
+Object Methods...
+
+* AbstractBrowser.<span class="apidocCodeKeywordSpan">extend</span>(child, options)  &#x3c;- extend the abstract object
+
+These methods are inherited by MockBrowser to provide a consistent interface between test and run-time environments.
+
+### Extending AbstractBrowser
+
+For run-time use you can extend AbstractBrowser to inherit the API.  This enables attaching other object to the browser object rather
+ than using globals.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mock-browser.mocks" id="apidoc.module.mock-browser.mocks">module mock-browser.mocks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockBrowser" id="apidoc.element.mock-browser.mocks.MockBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win, opts;
+
+    if (!options) {
+        options = {};
+    }
+
+    if (options.window) {
+        // user has already created a jsdom window with document.
+        win = options.window;
+    }
+    else
+    {
+        var doc = jsdom(&#x27;&#x3c;!DOCTYPE html&#x3e;&#x3c;html&#x3e;&#x3c;body&#x3e;&#x3c;/body&#x3e;&#x3c;/html&#x3e;&#x27; );
+        win = doc.defaultView;
+    }
+
+    if (!win.localStorage) {
+        (win).localStorage = options.localStorage || new MockStorage();
+    }
+
+    if (!win.sessionStorage) {
+        (win).sessionStorage = options.sessionStorage = new MockStorage();
+    }
+
+    opts = dash.clone( options );
+    opts.window = win;
+
+    AbstractBrowser.extend( this, opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockStorage" id="apidoc.element.mock-browser.mocks.MockStorage">
+        function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockStorage
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockStorage = function (data) {
+    &#x27;use strict&#x27;;
+
+    var storage = this;
+
+    if (!data) data = {};
+
+    var keylist = dash.keys(data);
+
+    var nullOrValue = function(value) {
+      return dash.isUndefined(value) ? null : value;
+    };
+
+    this.key = function(index) {
+        var key = keylist[index];
+        return nullOrValue(key);
+    };
+
+    this.setItem = function(key, value) {
+        if (!dash.includes(keylist, key)) keylist.push(key);
+        data[ key ] = value;
+        storage.length = dash.size( data );
+    };
+
+    this.getItem = function(key) {
+        var value = data[ key ];
+        return nullOrValue(value);
+    };
+
+    this.removeItem = function(key) {
+      delete data [ key ];
+      keylist = dash.without( keylist, key );
+      storage.length = dash.size( data );
+    };
+
+    this.clear = function() {
+        var keys = dash.keys( data );
+        var remove = this.removeItem;
+        keys.forEach(function(key) {
+            remove(key);
+        });
+    };
+
+    this.length = dash.size( data );
+
+    this.__protected = function() {
+        return {
+            data:data
+        };
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mock-browser.mocks.MockBrowser" id="apidoc.module.mock-browser.mocks.MockBrowser">module mock-browser.mocks.MockBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockBrowser.MockBrowser" id="apidoc.element.mock-browser.mocks.MockBrowser.MockBrowser">
+        function <span class="apidocSignatureSpan">mock-browser.mocks.</span>MockBrowser
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockBrowser = function (options) {
+    &#x27;use strict&#x27;;
+
+    var win, opts;
+
+    if (!options) {
+        options = {};
+    }
+
+    if (options.window) {
+        // user has already created a jsdom window with document.
+        win = options.window;
+    }
+    else
+    {
+        var doc = jsdom(&#x27;&#x3c;!DOCTYPE html&#x3e;&#x3c;html&#x3e;&#x3c;body&#x3e;&#x3c;/body&#x3e;&#x3c;/html&#x3e;&#x27; );
+        win = doc.defaultView;
+    }
+
+    if (!win.localStorage) {
+        (win).localStorage = options.localStorage || new MockStorage();
+    }
+
+    if (!win.sessionStorage) {
+        (win).sessionStorage = options.sessionStorage = new MockStorage();
+    }
+
+    opts = dash.clone( options );
+    opts.window = win;
+
+    AbstractBrowser.extend( this, opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockBrowser.createDocument" id="apidoc.element.mock-browser.mocks.MockBrowser.createDocument">
+        function <span class="apidocSignatureSpan">mock-browser.mocks.MockBrowser.</span>createDocument
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createDocument = function () {
+    &#x27;use strict&#x27;;
+
+    var browser = new MockBrowser();
+
+    return browser.getDocument();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    assert storage.getItem(&#x27;mykey&#x27;) === &#x27;my value&#x27;;
+~~~
+
+### Mock Browser Object Methods
+
+Two convenience methods are added to make it easy to get either a window or DOM document mock.
+
+* MockBrowser.<span class="apidocCodeKeywordSpan">createDocument</span>()
+* MockBrowser.createWindow()
+
+### Abstract Browser
+
+The AbstractBrowser object can be used as an interface for run-time client apps to access browser window related objects.  This
+approach enables code to be used both in and outside the browser.
+
+~~~
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mock-browser.mocks.MockBrowser.createWindow" id="apidoc.element.mock-browser.mocks.MockBrowser.createWindow">
+        function <span class="apidocSignatureSpan">mock-browser.mocks.MockBrowser.</span>createWindow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createWindow = function () {
+    &#x27;use strict&#x27;;
+
+    var browser = new MockBrowser();
+
+    return browser.getWindow();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+~~~
+
+### Mock Browser Object Methods
+
+Two convenience methods are added to make it easy to get either a window or DOM document mock.
+
+* MockBrowser.createDocument()
+* MockBrowser.<span class="apidocCodeKeywordSpan">createWindow</span>()
+
+### Abstract Browser
+
+The AbstractBrowser object can be used as an interface for run-time client apps to access browser window related objects.  This
+approach enables code to be used both in and outside the browser.
+
+~~~
+	var AbstractBrowser = require(&#x27;mock-browser&#x27;).delegates.AbstractBrowser;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
